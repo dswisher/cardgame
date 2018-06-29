@@ -17,6 +17,12 @@ Note that you will need to activate the venv for each new shell!
 
 ### Flask ###
 
+* [Home](http://flask.pocoo.org/) - [Quick Start](http://flask.pocoo.org/docs/1.0/quickstart/)
+* [Awesome Flask](https://github.com/humiaozuzu/awesome-flask) - curated list of Flask resources and plugins
+
+### Flask Extensions ###
+
+* [Assets](http://flask-assets.readthedocs.io/en/latest/)
 * Flask [socket IO](https://github.com/miguelgrinberg/Flask-SocketIO) extension
 
 ### Possibly useful Reddit Discussions ###
