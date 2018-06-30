@@ -21,7 +21,7 @@ To run, do:
 2) `flask run`
 
 To update requirements, edit the `requirements-to-freeze.txt` file by hand, then do:
-`pip freeze -r requirements-to-freeze.txt > requiments.txt`
+`pip freeze -r requirements-to-freeze.txt > requirements.txt`
 
 To upgrade requirements, do: `pip install -r requirements-to-freeze.txt --upgrade`
 
