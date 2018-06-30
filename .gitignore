@@ -3,4 +3,5 @@ venv
 __pycache__
 .python-version
 static/.webassets-cache/
+app/static/.webassets-cache/
 gen

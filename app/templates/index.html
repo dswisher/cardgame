@@ -1,13 +1,9 @@
-<!doctype html>
-<html>
-<head>
-    <title>{{ title }} - CardGame</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
     <h1>Flask</h1>
     <p>Hello, {{ user.username }}</p>
     <ul>
         <li><a href="{{ url_for('hello') }}">Hello</a></li>
     </ul>
-</body>
-</html>
+{% endblock %}

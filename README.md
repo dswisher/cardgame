@@ -13,12 +13,23 @@ This was written using python 3.6.5. Here are the steps I used:
 
 Note that you will need to activate the venv for each new shell!
 
+## Common Tasks ##
+
 To run, do:
 
 1) `export FLASK_APP=cardgame.py`
 2) `flask run`
 
+To update requirements, edit the `requirements-to-freeze.txt` file by hand, then do:
+`pip freeze -r requirements-to-freeze.txt > requiments.txt`
+
+To upgrade requirements, do: `pip install -r requirements-to-freeze.txt --upgrade`
+
 ## Possibly useful links ##
+
+### General Python ###
+
+* A better [pip workflow](https://www.kennethreitz.org/essays/a-better-pip-workflow)
 
 ### Flask ###
 
