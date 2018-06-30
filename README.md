@@ -13,6 +13,11 @@ This was written using python 3.6.5. Here are the steps I used:
 
 Note that you will need to activate the venv for each new shell!
 
+To run, do:
+
+1) `export FLASK_APP=hello.py`
+2) `flask run`
+
 ## Possibly useful links ##
 
 ### Flask ###
