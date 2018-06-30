@@ -15,7 +15,7 @@ Note that you will need to activate the venv for each new shell!
 
 To run, do:
 
-1) `export FLASK_APP=hello.py`
+1) `export FLASK_APP=cardgame.py`
 2) `flask run`
 
 ## Possibly useful links ##
@@ -24,6 +24,7 @@ To run, do:
 
 * [Home](http://flask.pocoo.org/) - [Quick Start](http://flask.pocoo.org/docs/1.0/quickstart/)
 * [Awesome Flask](https://github.com/humiaozuzu/awesome-flask) - curated list of Flask resources and plugins
+* [Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 
 ### Flask Extensions ###
 
