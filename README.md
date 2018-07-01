@@ -53,6 +53,7 @@ To run, do:
 
 * [Assets](http://flask-assets.readthedocs.io/en/latest/) - Flask binding for [webassets](https://webassets.readthedocs.io/en/latest/index.html)
 * Flask [socket IO](https://github.com/miguelgrinberg/Flask-SocketIO) extension
+* Flask [debug toolbar](https://flask-debugtoolbar.readthedocs.io/en/latest/) - [github](https://github.com/mgood/flask-debugtoolbar)
 
 ### Front-End Tools ###
 
