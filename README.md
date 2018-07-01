@@ -54,6 +54,8 @@ To run, do:
 * [Assets](http://flask-assets.readthedocs.io/en/latest/) - Flask binding for [webassets](https://webassets.readthedocs.io/en/latest/index.html)
 * Flask [socket IO](https://github.com/miguelgrinberg/Flask-SocketIO) extension
 * Flask [debug toolbar](https://flask-debugtoolbar.readthedocs.io/en/latest/) - [github](https://github.com/mgood/flask-debugtoolbar)
+* Flask [SQLAlchemy](http://flask-sqlalchemy.pocoo.org/latest/) - [github](https://github.com/mitsuhiko/flask-sqlalchemy) - ORM
+* Flask [migrate](http://flask-migrate.readthedocs.io/en/latest/) - [github](https://github.com/miguelgrinberg/flask-migrate) - database migrations
 
 ### Front-End Tools ###
 

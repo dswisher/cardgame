@@ -1,3 +1,5 @@
 Flask
 Flask-Assets
+Flask-Migrate
+Flask-SQLAlchemy
 Flask-WTF
