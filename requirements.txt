@@ -1,5 +1,6 @@
 Flask==1.0.2
 Flask-Assets==0.12
+Flask-WTF==0.14.2
 ## The following requirements were added by pip freeze:
 click==6.7
 itsdangerous==0.24
@@ -8,3 +9,4 @@ jsmin==2.2.2
 MarkupSafe==1.0
 webassets==0.12.1
 Werkzeug==0.14.1
+WTForms==2.2.1
