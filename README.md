@@ -13,6 +13,27 @@ This was written using python 3.6.5. Here are the steps I used:
 
 Note that you will need to activate the venv for each new shell!
 
+## Managing Requirements ##
+
+There are a couple of python tools that I use for development, but I do not want those to be part of
+the `requirements.txt` file. In addition, there are only a handful of direct dependencies, and I wish
+to keep those separate from the transitive closure.
+
+For that to happen, I use two files: `requirements-to-freeze.txt`, which contains the direct dependencies,
+without any versions. This allows upgrading requirements by executing:
+
+    pip install -r requirements-to-freeze.txt --upgrade
+
+The dev tools and their dependencies are kept in the second file, `requirements-to-ignore.txt`. Keeping
+these separate allows regeneration of the `requirements.txt` file using the following command:
+
+    pip freeze -r requirements-to-freeze.txt | grep -vFxf requirements-to-ignore.txt > requirements.txt
+
+The `requirements-to-ignore.txt` file was generating by installing all the dev dependencies first,
+then running `pip freeze > requirements-to-ignore.txt`.
+
+This is all based on the [better pip workflow](https://www.kennethreitz.org/essays/a-better-pip-workflow) blog entry, plus this [SO post](https://stackoverflow.com/a/43137206/282725).
+
 ## Common Tasks ##
 
 To run, do:
@@ -20,16 +41,7 @@ To run, do:
 1) `export FLASK_APP=cardgame.py`
 2) `flask run`
 
-To update requirements, edit the `requirements-to-freeze.txt` file by hand, then do:
-`pip freeze -r requirements-to-freeze.txt > requirements.txt`
-
-To upgrade requirements, do: `pip install -r requirements-to-freeze.txt --upgrade`
-
 ## Possibly useful links ##
-
-### General Python ###
-
-* A better [pip workflow](https://www.kennethreitz.org/essays/a-better-pip-workflow)
 
 ### Flask ###
 
