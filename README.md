@@ -46,8 +46,8 @@ To run, do:
 ### Flask ###
 
 * [Home](http://flask.pocoo.org/) - [Quick Start](http://flask.pocoo.org/docs/1.0/quickstart/)
+* [Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world) - [current](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-email-support)
 * [Awesome Flask](https://github.com/humiaozuzu/awesome-flask) - curated list of Flask resources and plugins
-* [Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 
 ### Flask Extensions ###
 
