@@ -1,0 +1,68 @@
+
+// _variables.less
+@fa-font-path:        "../webfonts";
+@fa-font-size-base:   16px;
+@fa-line-height-base: 1;
+@fa-css-prefix:       fa;
+@fa-version:          "5.1.0";
+@fa-border-color:     #eee;
+@fa-inverse:          #fff;
+@fa-li-width:         2em;
+
+@fa-var-bars: "\f0c9";
+
+// _mixins.less
+.fa-icon() {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: -.125em;
+}
+
+// _core.less
+.@{fa-css-prefix}, .fas, .far, .fal, .fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+// _larger.less
+// _fixed_width.less
+// _list.less
+// _bordered_pulled.less
+// _animated.less
+// _rotated_flipped.less
+// _stacked.less
+
+// _icons.less
+.@{fa-css-prefix}-bars:before { content: @fa-var-bars; }
+
+// _screen-reader.less
+
+// fa-solid.less
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  src: url('@{fa-font-path}/fa-solid-900.eot');
+  src: url('@{fa-font-path}/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+    url('@{fa-font-path}/fa-solid-900.woff2') format('woff2'),
+    url('@{fa-font-path}/fa-solid-900.woff') format('woff'),
+    url('@{fa-font-path}/fa-solid-900.ttf') format('truetype'),
+    url('@{fa-font-path}/fa-solid-900.svg#fontawesome') format('svg');
+}
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+

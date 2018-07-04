@@ -51,11 +51,15 @@ To run, do:
 
 ### Flask Extensions ###
 
-* [Assets](http://flask-assets.readthedocs.io/en/latest/) - Flask binding for [webassets](https://webassets.readthedocs.io/en/latest/index.html)
+* [Assets](http://flask-assets.readthedocs.io/en/latest/) - Flask binding for [webassets](https://webassets.readthedocs.io/en/latest/index.html) - built-in [filters](https://webassets.readthedocs.io/en/latest/builtin_filters.html)
 * Flask [socket IO](https://github.com/miguelgrinberg/Flask-SocketIO) extension
 * Flask [debug toolbar](https://flask-debugtoolbar.readthedocs.io/en/latest/) - [github](https://github.com/mgood/flask-debugtoolbar)
 * Flask [SQLAlchemy](http://flask-sqlalchemy.pocoo.org/latest/) - [github](https://github.com/mitsuhiko/flask-sqlalchemy) - ORM
 * Flask [migrate](http://flask-migrate.readthedocs.io/en/latest/) - [github](https://github.com/miguelgrinberg/flask-migrate) - database migrations
+
+### Responsive Design ###
+
+* [Shay Howe](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 
 ### Front-End Tools ###
 

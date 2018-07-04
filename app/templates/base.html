@@ -7,18 +7,24 @@
         {% else %}
         <title>CardGame</title>
         {% endif %}
+        {% assets "main_css" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}" />
+        {% endassets %}
     </head>
     <body>
-        <div>
-            CardGame:
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('explore') }}">Explore</a>
+		<div class="topnav" id="myTopnav">
+            <a href="{{ url_for('index') }}"{% if active_page == 'index' %} class="active"{% endif %}>Home</a>
+            <a href="{{ url_for('explore') }}"{% if active_page == 'explore' %} class="active"{% endif %}>Explore</a>
+            <a href="{{ url_for('hello') }}"{% if active_page == 'hello' %} class="active"{% endif %}>Hello</a>
             {% if current_user.is_anonymous %}
             <a href="{{ url_for('login') }}">Login</a>
             {% else %}
-            <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
+            <a href="{{ url_for('user', username=current_user.username) }}"{% if active_page == 'profile' %} class="active"{% endif %}>Profile</a>
             <a href="{{ url_for('logout') }}">Logout</a>
             {% endif %}
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
         <hr />
         {% with messages = get_flashed_messages() %}
@@ -31,5 +37,9 @@
         {% endif %}
         {% endwith %}
         {% block content %}{% endblock %}
+
+        {% assets "main_js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+        {% endassets %}
     </body>
 </html>
