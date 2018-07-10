@@ -5,9 +5,15 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from hashlib import md5
 
 
+# TODO - at some point, remove followers (replaced by friends)
 followers = db.Table('followers',
                      db.Column('follower_id', db.Integer, db.ForeignKey('user.id')),
                      db.Column('followed_id', db.Integer, db.ForeignKey('user.id'))
+                     )
+
+friends = db.Table('friends',
+                     db.Column('friend_id', db.Integer, db.ForeignKey('user.id')),
+                     db.Column('friended_id', db.Integer, db.ForeignKey('user.id'))
                      )
 
 
@@ -25,6 +31,12 @@ class User(UserMixin, db.Model):
             primaryjoin=(followers.c.follower_id == id),
             secondaryjoin=(followers.c.followed_id == id),
             backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')
+
+    friended = db.relationship(
+            'User', secondary=friends,
+            primaryjoin=(friends.c.friend_id == id),
+            secondaryjoin=(friends.c.friended_id == id),
+            backref=db.backref('friends', lazy='dynamic'), lazy='dynamic')
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
@@ -65,6 +77,13 @@ class Post(db.Model):
 
     def __rep__(self):
         return '<Post {}>'.format(self.body)
+
+
+class Game(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    player1 = db.Column(db.Integer, db.ForeignKey('user.id'))
+    player2 = db.Column(db.Integer, db.ForeignKey('user.id'))
+    created = db.Column(db.DateTime, default=datetime.utcnow)
 
 
 @login.user_loader

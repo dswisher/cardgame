@@ -31,8 +31,8 @@ assets.register('main_js', js_bundle)
 assets.register('main_css', less_bundle)
 
 # Rebuild the assets immediately, rather than waiting for page load
-assets['main_js'].urls()
-assets['main_css'].urls()
+# assets['main_js'].urls()
+# assets['main_css'].urls()
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)

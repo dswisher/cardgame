@@ -4,12 +4,13 @@ A multi-player card game.
 
 ## Initial Setup ##
 
-This was written using python 3.6.6. Here are the steps I used:
+This was written using python 3.7.0. Here are the steps I used:
 
-1) In the root directory, run: `pyenv local 3.6.6`
+1) In the root directory, run: `pyenv local 3.7.0`
 2) Set up the virtual environment: `python -m venv venv`
 3) Activate it: `source venv/bin/activate`
 4) Install the requirements: `pip install -r requirements.txt`
+5) Install the less compiler: `npm install -g less`
 
 Note that you will need to activate the venv for each new shell!
 
