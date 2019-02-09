@@ -4,17 +4,17 @@
     <h1>Flask</h1>
     <p>Hello, {{ current_user.username }}</p>
 
-    {% if form %}
+    {% if post_form %}
     <form action="{{ url_for('index') }}" method="post">
-        {{ form.hidden_tag() }}
+        {{ post_form.hidden_tag() }}
         <p>
-            {{ form.post.label }}<br>
-            {{ form.post(cols=32, rows=4) }}<br>
-            {% for error in form.post.errors %}
+            {{ post_form.post.label }}<br>
+            {{ post_form.post(cols=32, rows=4) }}<br>
+            {% for error in post_form.post.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
         </p>
-        <p>{{ form.submit() }}</p>
+        <p>{{ post_form.submit() }}</p>
     </form>
     {% endif %}
 

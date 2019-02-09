@@ -7,6 +7,8 @@ from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm
 from app.models import User, Post
 from datetime import datetime
 
+from game_helpers import create_game
+
 
 @app.before_request
 def before_request():
@@ -19,9 +21,9 @@ def before_request():
 @app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
-    form = PostForm()
-    if form.validate_on_submit():
-        post = Post(body=form.post.data, author=current_user)
+    post_form = PostForm()
+    if post_form.validate_on_submit():
+        post = Post(body=post_form.post.data, author=current_user)
         db.session.add(post)
         db.session.commit()
         flash('Your post is now live!')
@@ -30,7 +32,15 @@ def index():
     posts = current_user.followed_posts().paginate(page, app.config['POSTS_PER_PAGE'], False)
     next_url = url_for('index', page=posts.next_num) if posts.has_next else None
     prev_url = url_for('index', page=posts.prev_num) if posts.has_prev else None
-    return render_template('index.html', title='Home Page', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url, active_page='index')
+    return render_template('index.html', title='Home Page', post_form=post_form, posts=posts.items, next_url=next_url, prev_url=prev_url, active_page='index')
+
+
+@app.route('/game/create', methods=['POST']))
+@login_required
+def create_game():
+    # TODO - allow them to choose a deck and other game options
+    create_game(current_user)
+    return redirect(url_for('index'))
 
 
 @app.route('/hello/')
